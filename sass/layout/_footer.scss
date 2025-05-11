@@ -1,0 +1,90 @@
+footer.main_footer {
+    margin-top: 120px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: $black;
+    @include breakpoint(tablet){
+        padding-bottom: 56px;
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    a img{
+        width: 110px;
+    }
+    p.text16{
+        padding-top: 38px;
+        color: $white;
+        font-family: $secondary-font;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 26px;
+        @include breakpoint (tablet){
+            width: 39%;
+            padding-top: 0px;
+        }
+    }
+    nav ul {
+        padding-top: 38px;
+        @include reset-list();
+        gap: 20px;
+        @include breakpoint (tablet){
+            padding-top: 0px;
+        }
+        li a {
+            color: white;
+        }
+    }
+}
+
+footer div.footer_maps{
+    padding: 48px 32px 48px 32px;
+    background-color: $brown;
+    @include breakpoint (tablet){
+        padding: 56px 40px 56px 39px;
+        display: flex;
+    }
+    @include breakpoint (desktop){
+        padding: 80px 165px 80px 165px;
+        justify-content: space-between;
+    }
+    a.footer_map_logo{
+        @include breakpoint (tablet){
+            width: 110px;
+            margin-right: 65px;
+        }
+        @include breakpoint (desktop){
+            margin-right: 0px;
+            width: 160px;
+        }
+        img{
+            @include breakpoint (desktop){
+                width: 160px;
+            }
+        }
+    }
+    p{
+        padding-top: 38px;
+        padding-bottom: 38px;
+        font-family: $secondary-font;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 26px;
+        @include breakpoint (tablet){
+            padding-top: 0px;
+            padding-bottom: 0px;
+            width: 41%;
+        }
+        @include breakpoint (desktop){
+            margin-left: 50px;
+        }
+    }
+    nav ul{
+        @include reset-list();
+        gap: 15px;
+        @include breakpoint (tablet){
+            margin-left: 133px;
+        }
+        }
+    }

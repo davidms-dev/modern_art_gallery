@@ -1,0 +1,81 @@
+.map{
+    position:relative;
+    img.tablet_map{
+        display: none;
+        @include breakpoint(tablet){
+            display: block;
+        }
+    }
+    img.mobile_map{
+        @include breakpoint(tablet){
+            display: none;
+        }
+    }
+    a.button-brown{
+        @include button-brown();
+        position:absolute;
+        top: 0;
+        left: 0;
+        @include breakpoint(tablet){
+            left: 39px;
+        }
+        @include breakpoint(desktop){
+            left: 156px;
+        }
+    }
+}
+.text_location{
+    background-color: $black;
+    padding-top: 58px;
+    padding-bottom: 56px;
+    padding-left: 16px;
+    @include breakpoint (tablet){
+        padding: 104px 40px 80px 39px;
+        display: flex;
+        gap: 68px;
+    }
+    @include breakpoint (desktop){
+        padding: 88px 165px 128px 165px;
+        gap: 220px;
+    }
+    h2{
+        color: $white;
+        font-size: 50px;
+        font-weight: 900;
+        @include breakpoint (desktop){
+            font-size: 70px;
+            font-weight: 900;
+            line-height: 70px; 
+        }
+    }
+    &_direction{
+        p.text_location_orange{
+            color: $brown;
+            font-size: 32px;
+            padding-top: 48px;
+            padding-bottom: 20px;
+            @include breakpoint (tablet){
+                padding-top: 0px;
+            }
+            @include breakpoint (desktop){
+                font-size: 36px;
+                font-weight: 900;
+            }
+        }
+        &_text{
+            color: $white;
+            font-weight: 300;
+            font-family: $secondary-font;
+            p{
+                padding-bottom: 5px;
+                @include breakpoint (desktop){
+                    font-size: 22px;
+                    font-weight: 300;
+                }
+            }
+            p.location_description{
+                padding-top: 15px;
+            }
+        }
+    }
+}

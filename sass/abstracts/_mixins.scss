@@ -1,0 +1,86 @@
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin button-black(){
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 800;
+  display: inline-block;
+  padding: 24px 35px 24px 32px;
+  background-color: $black;
+  position: relative;
+  &::after{
+    position: absolute;
+    top: 0;
+    right:-56px;
+    content: "";
+    width: 56px;
+    height: 100%;
+    background-color: $brown;
+    background-image: url(../../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    :hover{
+      background-color: $black;
+    }
+  }
+  :hover{
+    background-color: $brown;
+  }
+}
+
+@mixin button-brown(){
+  color: $white;
+  text-decoration: none;
+  background-color: $black;
+  padding: 24px 32px 24px 80px;
+  position: relative;
+  :hover{
+    background-color: $brown;
+  }
+  &::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 56px;
+    height: 100%;
+    background-color: $brown;
+    background-image: url(../../img/arrow_reverse.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    :hover{
+      background-color: $black;
+    }
+  }
+}
+
+@mixin reset-list(){
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
